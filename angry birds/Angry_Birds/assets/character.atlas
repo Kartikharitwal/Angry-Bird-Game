@@ -1,0 +1,75 @@
+character.png
+size: 3800, 1482
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+BombBird
+  rotate: false
+  xy: 0, 0
+  size: 515, 682
+  orig: 515, 682
+  offset: 0, 0
+  index: -1
+catapult
+  rotate: false
+  xy: 515, 0
+  size: 360, 896
+  orig: 360, 896
+  offset: 0, 0
+  index: 1
+chuck
+  rotate: false
+  xy: 875, 0
+  size: 1000, 897
+  orig: 1000, 897
+  offset: 0, 0
+  index: -1
+fatpig
+  rotate: false
+  xy: 1875, 0
+  size: 894, 992
+  orig: 894, 992
+  offset: 0, 0
+  index: -1
+glassBlock
+  rotate: false
+  xy: 2769, 0
+  size: 31, 179
+  orig: 31, 179
+  offset: 0, 0
+  index: -1
+helmetpig
+  rotate: false
+  xy: 2800, 0
+  size: 1000, 847
+  orig: 1000, 847
+  offset: 0, 0
+  index: -1
+muchpig
+  rotate: false
+  xy: 0, 992
+  size: 566, 490
+  orig: 566, 490
+  offset: 0, 0
+  index: -1
+RedBirdToons
+  rotate: false
+  xy: 566, 992
+  size: 278, 263
+  orig: 278, 263
+  offset: 0, 0
+  index: -1
+rockBlock
+  rotate: false
+  xy: 844, 992
+  size: 66, 398
+  orig: 66, 398
+  offset: 0, 0
+  index: -1
+woodenBlock
+  rotate: false
+  xy: 910, 992
+  size: 33, 184
+  orig: 33, 184
+  offset: 0, 0
+  index: -1

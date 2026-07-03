@@ -1,0 +1,201 @@
+{
+birds: [
+	{
+		x: 1.080991
+		y: 0.912427
+		type: RedBird
+		scale: 0.15
+		width: 278
+		height: 263
+	}
+	{
+		x: 0.55323535
+		y: 0.91188663
+		type: RedBird
+		scale: 0.15
+		width: 278
+		height: 263
+	}
+]
+pigs: [
+	{
+		x: 7.1977534
+		y: 1.9545099
+		health: 50
+		scale: 0.07
+		width: 894
+		height: 992
+	}
+	{
+		x: 6.7977233
+		y: 1.6990631
+		health: 50
+		scale: 0.07
+		width: 894
+		height: 992
+	}
+	{
+		x: 7.749212
+		y: 2.5032039
+		health: 50
+		scale: 0.07
+		width: 894
+		height: 992
+	}
+]
+blocks: [
+	{
+		x: 4.0971355
+		y: 0.8482455
+		health: 100
+		type: WoodenBlock
+		scale: 0.1
+		width: 394
+		height: 388
+	}
+	{
+		x: 4.0980153
+		y: 1.247841
+		health: 100
+		type: WoodenBlock
+		scale: 0.1
+		width: 394
+		height: 388
+	}
+	{
+		x: 4.0324364
+		y: 1.651801
+		health: 100
+		type: WoodenBlock2
+		scale: 0.1
+		width: 394
+		height: 396
+	}
+	{
+		x: 4.7087865
+		y: 0.84895074
+		health: 100
+		type: WoodenBlock
+		scale: 0.1
+		width: 394
+		height: 388
+	}
+	{
+		x: 4.5599194
+		y: 1.2565864
+		health: 100
+		type: WoodenBlock2
+		scale: 0.1
+		width: 394
+		height: 396
+	}
+	{
+		x: 6.0893226
+		y: 0.84927714
+		health: 100
+		type: WoodenBlock
+		scale: 0.1
+		width: 394
+		height: 388
+	}
+	{
+		x: 7.5126204
+		y: 0.84827524
+		health: 100
+		type: WoodenBlock
+		scale: 0.1
+		width: 394
+		height: 388
+	}
+	{
+		x: 5.656398
+		y: 0.85189533
+		health: 100
+		type: WoodenBlock
+		scale: 0.1
+		width: 394
+		height: 388
+	}
+	{
+		x: 7.6405215
+		y: 1.2486038
+		health: 100
+		type: WoodenBlock
+		scale: 0.1
+		width: 394
+		height: 388
+	}
+	{
+		x: 5.75879
+		y: 1.2594087
+		health: 100
+		type: WoodenBlock
+		scale: 0.1
+		width: 394
+		height: 388
+	}
+	{
+		x: 6.501444
+		y: 0.84899753
+		health: 100
+		type: WoodenBlock
+		scale: 0.1
+		width: 394
+		height: 388
+	}
+	{
+		x: 6.9974513
+		y: 0.8489578
+		health: 100
+		type: WoodenBlock
+		scale: 0.1
+		width: 394
+		height: 388
+	}
+	{
+		x: 7.7674694
+		y: 1.6422641
+		health: 100
+		type: WoodenBlock
+		scale: 0.1
+		width: 394
+		height: 388
+	}
+	{
+		x: 5.6632557
+		y: 1.6609355
+		health: 100
+		type: WoodenBlock
+		scale: 0.1
+		width: 394
+		height: 388
+	}
+	{
+		x: 6.5173717
+		y: 1.2519876
+		health: 100
+		type: WoodenBlock
+		scale: 0.1
+		width: 394
+		height: 388
+	}
+	{
+		x: 7.1182294
+		y: 1.2568476
+		health: 100
+		type: WoodenBlock
+		scale: 0.1
+		width: 394
+		height: 388
+	}
+	{
+		x: 7.754832
+		y: 2.0449429
+		health: 100
+		type: WoodenBlock
+		scale: 0.1
+		width: 394
+		height: 388
+	}
+]
+}

@@ -1,0 +1,8 @@
+styles: {
+com.badlogic.gdx.scenes.scene2d.ui.ImageButton$ImageButtonStyle:
+{
+down: button,
+up: button,
+checked: button
+}
+}

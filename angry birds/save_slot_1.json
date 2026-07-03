@@ -1,0 +1,137 @@
+{
+birds: [
+	{
+		x: 2.59
+		y: 2.915
+		type: RedBird
+		scale: 0.15
+		width: 278
+		height: 263
+	}
+	{
+		x: 0.59
+		y: 2.315
+		type: RedBird
+		scale: 0.15
+		width: 278
+		height: 263
+	}
+	{
+		x: 1.275
+		y: 4.41
+		type: BombBird
+		scale: 0.060000002
+		width: 515
+		height: 682
+	}
+]
+pigs: [
+	{
+		x: 6.288608
+		y: 1.5863174
+		health: 44.701458
+		scale: 0.07
+		width: 566
+		height: 490
+	}
+	{
+		x: 6.6714215
+		y: 1.989457
+		health: 50
+		scale: 0.07
+		width: 566
+		height: 490
+	}
+	{
+		x: 7.086124
+		y: 2.3856068
+		health: 50
+		scale: 0.07
+		width: 566
+		height: 490
+	}
+]
+blocks: [
+	{
+		x: 6.264166
+		y: 0.8498902
+		health: 100
+		type: GlassBlock
+		scale: 0.1
+		width: 392
+		height: 390
+	}
+	{
+		x: 6.2621636
+		y: 1.2541937
+		health: 100
+		type: GlassBlock
+		scale: 0.1
+		width: 392
+		height: 390
+	}
+	{
+		x: 6.672204
+		y: 0.8497781
+		health: 100
+		type: GlassBlock
+		scale: 0.1
+		width: 392
+		height: 390
+	}
+	{
+		x: 6.671857
+		y: 1.2533733
+		health: 100
+		type: GlassBlock
+		scale: 0.1
+		width: 392
+		height: 390
+	}
+	{
+		x: 6.668579
+		y: 1.657565
+		health: 100
+		type: GlassBlock
+		scale: 0.1
+		width: 392
+		height: 390
+	}
+	{
+		x: 7.0796742
+		y: 0.84934837
+		health: 100
+		type: GlassBlock
+		scale: 0.1
+		width: 392
+		height: 390
+	}
+	{
+		x: 7.0804744
+		y: 1.2500255
+		health: 100
+		type: GlassBlock
+		scale: 0.1
+		width: 392
+		height: 390
+	}
+	{
+		x: 7.08142
+		y: 1.6515061
+		health: 100
+		type: GlassBlock
+		scale: 0.1
+		width: 392
+		height: 390
+	}
+	{
+		x: 7.083008
+		y: 2.0543864
+		health: 100
+		type: GlassBlock
+		scale: 0.1
+		width: 392
+		height: 390
+	}
+]
+}

@@ -1,0 +1,183 @@
+{
+birds: [
+	{
+		x: 1.035876
+		y: 0.9079999
+		type: RedBird
+		scale: 0.15
+		width: 278
+		height: 263
+	}
+	{
+		x: 1.566192
+		y: 0.90496486
+		type: BombBird
+		scale: 0.075
+		width: 515
+		height: 682
+	}
+]
+pigs: [
+	{
+		x: 5.0019135
+		y: 3.0435214
+		health: 50
+		scale: 0.07
+		width: 1000
+		height: 847
+	}
+	{
+		x: 6.2007427
+		y: 1.9634175
+		health: 50
+		scale: 0.07
+		width: 1000
+		height: 847
+	}
+	{
+		x: 7.4019227
+		y: 3.0435274
+		health: 50
+		scale: 0.07
+		width: 1000
+		height: 847
+	}
+]
+blocks: [
+	{
+		x: 4.98521
+		y: 0.8297691
+		health: 100
+		type: IronBlock
+		scale: 0.1
+		width: 370
+		height: 353
+	}
+	{
+		x: 4.985006
+		y: 1.1901006
+		health: 100
+		type: IronBlock
+		scale: 0.1
+		width: 370
+		height: 353
+	}
+	{
+		x: 4.9850216
+		y: 1.5510442
+		health: 100
+		type: IronBlock
+		scale: 0.1
+		width: 370
+		height: 353
+	}
+	{
+		x: 4.9852324
+		y: 1.9130119
+		health: 100
+		type: IronBlock
+		scale: 0.1
+		width: 370
+		height: 353
+	}
+	{
+		x: 4.9854527
+		y: 2.2764232
+		health: 100
+		type: IronBlock
+		scale: 0.1
+		width: 370
+		height: 353
+	}
+	{
+		x: 4.985828
+		y: 2.6416345
+		health: 100
+		type: IronBlock
+		scale: 0.1
+		width: 370
+		height: 353
+	}
+	{
+		x: 6.1850147
+		y: 0.8306917
+		health: 100
+		type: IronBlock
+		scale: 0.1
+		width: 370
+		height: 353
+	}
+	{
+		x: 6.1849794
+		y: 1.1955622
+		health: 100
+		type: IronBlock
+		scale: 0.1
+		width: 370
+		height: 353
+	}
+	{
+		x: 6.1848454
+		y: 1.5613708
+		health: 100
+		type: IronBlock
+		scale: 0.1
+		width: 370
+		height: 353
+	}
+	{
+		x: 7.3852005
+		y: 0.82981217
+		health: 100
+		type: IronBlock
+		scale: 0.1
+		width: 370
+		height: 353
+	}
+	{
+		x: 7.3850093
+		y: 1.1901405
+		health: 100
+		type: IronBlock
+		scale: 0.1
+		width: 370
+		height: 353
+	}
+	{
+		x: 7.3850303
+		y: 1.5510777
+		health: 100
+		type: IronBlock
+		scale: 0.1
+		width: 370
+		height: 353
+	}
+	{
+		x: 7.3852415
+		y: 1.9130347
+		health: 100
+		type: IronBlock
+		scale: 0.1
+		width: 370
+		height: 353
+	}
+	{
+		x: 7.38546
+		y: 2.276437
+		health: 100
+		type: IronBlock
+		scale: 0.1
+		width: 370
+		height: 353
+	}
+	{
+		x: 7.3858395
+		y: 2.6416428
+		health: 100
+		type: IronBlock
+		scale: 0.1
+		width: 370
+		height: 353
+	}
+]
+}
