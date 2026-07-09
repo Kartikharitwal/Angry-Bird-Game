@@ -58,7 +58,7 @@ configure(subprojects) {
 
 subprojects {
   version = '$projectVersion'
-  ext.appName = 'AngryBirds_2023124_2023371'
+  ext.appName = 'AngryBirds_2023275_2023371'
   repositories {
     mavenCentral()
     maven { url 'https://s01.oss.sonatype.org' }
@@ -70,4 +70,4 @@ subprojects {
   }
 }
 
-eclipse.project.name = 'AngryBirds_2023124_2023371' + '-parent'
+eclipse.project.name = 'AngryBirds_2023275_2023371' + '-parent'
