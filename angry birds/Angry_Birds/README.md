@@ -1,217 +1,307 @@
-# Angry Birds-style Game
+# Angry Birds Game
 
-## Overview
+A Java desktop game inspired by Angry Birds, built with libGDX and Box2D. The game lets players launch birds from a catapult, hit block structures, damage pigs, clear levels, save progress, and resume saved games.
 
-This project is a clone of the popular Angry Birds game, developed using the libGDX framework. The game allows players to launch birds at structures to defeat pigs, providing engaging gameplay through various levels and mechanics. This project serves not only as an enjoyable game but also as a learning tool for aspiring game developers.
+## Project Details
 
-### Goals of the Project
-
-- **Replication of Core Mechanics**: The primary aim is to replicate the core mechanics of Angry Birds, including the physics-based launching system, destructible environments, and various bird types.
-- **Learning Experience**: The project provides an opportunity to learn game development concepts, specifically using libGDX, a powerful game development framework.
-- **Object-Oriented Design**: It explores principles of object-oriented programming and design patterns, promoting good software design practices.
-- **Skill Enhancement**: The project aims to enhance Java programming skills while developing expertise in graphics rendering and game physics.
+- Project type: Desktop 2D physics game
+- Language: Java
+- Framework: libGDX
+- Physics engine: Box2D
+- Desktop backend: LWJGL3
+- Build tool: Gradle
+- Roll No: 2023275
 
 ## Features
-### Core Features
-- **Basic Gameplay**:
-  - Players drag and release birds from a catapult to destroy structures and pigs.
-  - Birds follow realistic trajectories based on angle and speed.
-  - Pigs and blocks respond dynamically to hits, simulating real-world physics.
 
-- **Bird Types**:
-  - **Red Bird**: Standard bird with basic damage.
-  - **Bomb Bird**: Explodes on command, causing massive area damage.
-  - **Yellow Bird**: Faster bird that can accelerate mid-flight for greater impact.
+- Loading screen with animated GIF and progress bar
+- Main menu with new game, resume, and exit options
+- Level selection screen
+- Three playable levels
+- Physics-based bird launching
+- Power and angle sliders for controlled shots
+- Trajectory preview before launch
+- Multiple bird types with different behavior
+- Multiple pig types with health system
+- Destructible blocks and structures
+- Collision-based damage using Box2D contact callbacks
+- Win and loss screens
+- Pause menu
+- Save and load system with multiple save slots
+- JSON-based save files for restoring game state
+- Desktop launch through Gradle and LWJGL3
 
-- **Materials**:
-  - Structures are built using materials such as **wood**, **glass**, and **steel**, each with unique durability and destruction mechanics.
+## Technologies Used
 
-- **Levels**:
-  - A total of **three levels** are implemented, each with unique layouts, pig placements, and bird selections.
-  - Levels increase in difficulty, encouraging strategy development and skill progression.
+| Technology | Purpose |
+| --- | --- |
+| Java | Main programming language |
+| libGDX | Game framework, rendering, input, UI, screen lifecycle |
+| Box2D | Physics simulation, gravity, collisions, impulses |
+| LWJGL3 | Desktop backend for running the game on PC |
+| Gradle | Build automation and dependency management |
+| Scene2D | UI widgets, stages, actors, buttons, sliders |
+| JSON Serialization | Save/load game state |
 
-### Advanced Features
-1. **Serialization**:
-   - Save and load the current game state, including bird positions, structure integrity, and pig health.
-   - Restore progress from saved games using an intuitive menu system.
+## Requirements
 
-2. **Special Abilities**:
-   - Birds have unique abilities, such as the **Bomb Bird's explosion**, activated mid-flight.
-   - Double-click to trigger abilities, adding depth to gameplay.
+- Java JDK 8 or higher
+- Gradle wrapper included in the project
+- Windows, Linux, or macOS desktop environment
 
-3. **Physics Simulation**:
-   - Powered by **Box2D**, enabling realistic interactions between birds, pigs, and structures.
+The project includes `gradlew.bat`, so installing Gradle separately is not required on Windows.
 
-4. **Winning and Losing Conditions**:
-   - Win by eliminating all pigs in the level.
-   - Lose when all available birds are used without clearing the level.
+## How To Run
 
-5. **Interactive UI**:
-   - Intuitive menus for starting new games, resuming saved games, and navigating between levels.
+Open PowerShell in the project folder:
 
-6. **Health and Damage**:
-   - Pigs have health indicators displayed above their heads, with different damage thresholds based on their size.
-   - Blocks transmit damage to structures above them upon collapse.
-
-## Table of Contents
-
-- [Technologies](#technologies)
-- [Installation](#installation)
-- [Usage](#usage)
-- [Game Structure](#game-structure)
-    - [Classes](#classes)
-    - [Game Screens](#game-screens)
-    - [Gameplay Mechanics](#gameplay-mechanics)
-    - [Level Design](#level-design)
-- [Contributing](#contributing)
-- [Future Enhancements](#future-enhancements)
-- [Acknowledgments](#acknowledgments)
-
-## Technologies
-
-- **Java**: The primary programming language used for development, known for its versatility and portability.
-- **libGDX**: A cross-platform game development framework that simplifies game creation and deployment, allowing developers to focus on game logic rather than boilerplate code.
-- **SpriteBatch**: A libGDX class used for rendering images efficiently, minimizing draw calls for improved performance, particularly in graphics-intensive games.
-- **Box2D**: A physics engine integrated with libGDX, used for simulating physics-based interactions in the game, providing realistic movement and collision detection.
-
-## Installation
-
-To get the project up and running on your local machine, follow these steps:
-
-1. **Clone the Repository**:
-
-   ```bash
-   clone the git repo
-   ```
-
-2. **Set Up Your Environment**:
-    - Ensure you have the Java Development Kit (JDK) installed. Preferably JDK 8 or higher.
-    - Install an Integrated Development Environment (IDE) like IntelliJ IDEA or Eclipse to manage your project effectively.
-
-3. **Import the Project**:
-    - Open your IDE and import the project as a Gradle project, which will automatically resolve dependencies.
-
-4. **Build the Project**:
-    - Run the build command in your IDE or from the command line to compile the project:
-
-   ```bash
-   ./gradlew build
-   ```
-
-5. **Run the Game**:
-    - Execute the main class to start the game:
-
-   ```bash
-   ./gradlew run
-   ```
-
-6. **Explore Game Assets**:
-    - Familiarize yourself with the assets used in the game, located in the `core/assets` directory. This includes images, sounds, and other resources necessary for gameplay.
-
-## Usage
-
-- Launch the game to access the main menu, where you can choose to start a new game or resume a previously saved session.
-- **New Game**: Select this option to start from Level 1, where you can familiarize yourself with the controls and mechanics.
-- **Resume Game**: If you have a saved game, you can continue from where you left off.
-- The sliders are used for setting the angle and strength of the launch, providing a more controlled and precise experience. The angle and strength of your launch will determine the outcome.
-- Each level has a distinct setup of structures and pigs to defeat, encouraging players to develop and refine their strategies.
-
-## Game Structure
-
-### Classes
-
-1. **AngryBirds**: The main game class responsible for initializing the game, managing the game state, and rendering graphics.
-2. **Screens**:
-    - **MainMenuScreen**: Displays the main menu with options to start a new game, resume a saved game, or exit.
-    - **PlayScreen**: Contains the game logic and visual elements for each level, handling user input, physics, and gameplay mechanics.
-    - **LevelSelection**: Allows players to choose a specific level, presenting a list of available levels to play.
-    - **ResumeScreen**: Displays saved game slots, enabling players to load previously saved progress and continue their game.
-    - **WinningScreen**: Shows a congratulatory message upon successfully completing a level, with options to proceed to the next level or return to the main menu.
-    - **LosingScreen**: Displays a retry option when all birds are used, but the pigs remain undefeated.
-    - **PauseMenuScreen**: Allows players to pause the game during play, providing options to resume, restart the level, or return to the main menu.
-
-### Game Screens
-### Levels
-
-- **Level1**: 
-  - Contains the setup for the first level, featuring:
-    - **Birds**: 3 Red Birds.
-    - **Blocks**: Glass blocks that break easily.
-    - **Pigs**: Mechanic pigs with moderate health.
-  - This level introduces basic gameplay mechanics, including bird launching and block destruction.
-
-- **Level2**: 
-  - Introduces new elements and increased difficulty:
-    - **Birds**: 2 Red Birds and 1 Bomb Bird (explodes mid-flight).
-    - **Blocks**: A mix of materials, including stronger blocks.
-    - **Pigs**: Big pigs with higher health, requiring multiple hits to defeat.
-  - Players must adapt their strategy to deal with tougher blocks and pigs.
-
-- **Level3**: 
-  - The most challenging level, featuring:
-    - **Birds**: 1 Red Bird and 2 Bomb Birds.
-    - **Blocks**: A mix of materials, with more complex structures.
-    - **Pigs**: Angry pigs with high health and resilience, requiring precise attacks to defeat.
-  - This level demands careful planning and effective use of bird abilities to succeed.
-
-
-### Gameplay Mechanics
-
-- **Bird Types**: Each bird type has unique abilities. For example, a blue bird can split into three smaller birds mid-flight, while a black bird explodes on impact, adding strategic depth to gameplay.
-- **Pigs**: Different pig types are present, with varying health levels. Some pigs are protected by blocks that players must destroy first, introducing a puzzle-solving aspect.
-- **Physics**: The game uses Box2D for physics simulation, allowing for realistic interactions between birds, pigs, and structures, providing a more immersive experience.
-
-### Level Design
-
-- Levels are designed to gradually increase in difficulty, ensuring that players develop their skills as they progress.
-- Each level has specific layouts that require different strategies to complete, promoting replayability and encouraging players to experiment with different approaches.
-- Players earn stars based on performance, with achievements tied to score milestones, encouraging competition and exploration of all game mechanics.
-
-
-### Code of Conduct
-
-Please adhere to the project's code of conduct, ensuring a welcoming and respectful environment for all contributors.
-
-## Future Enhancements
-
-- **More Levels**: Adding additional levels with varying challenges to keep the gameplay fresh and engaging.
-- **Power-ups**: Introducing power-ups that players can collect during gameplay to enhance their birds' abilities and add strategic depth.
-- **Multiplayer Mode**: Developing a multiplayer mode where players can compete against each other, fostering a competitive community.
-- **Enhanced Graphics**: Improving visual elements and animations for a more engaging experience, possibly incorporating more advanced graphical techniques.
-- **User Customization**: Allowing players to customize their birds or catapult skins to enhance personalization and engagement.
-
-### Bonus Features
-
-1. **Loading Screen with GIF and Progress Bar**:
-   - A visually appealing loading screen is implemented, featuring an animated GIF and a progress bar.
-   - This enhances the user experience by providing feedback while the game or a level is loading.
-
-2. **Special Bomb Bird Ability**:
-   - The Bomb Bird has a unique ability to explode mid-flight, causing massive area damage.
-   - Players can trigger the explosion by double-clicking during the bird's flight, adding a layer of strategy to gameplay.
-   - This feature not only increases the game’s fun factor but also differentiates it from the original Angry Birds.
-
-## GITHUB
-
-- Github link:- https://github.com/krinew/AngryBirdsGame
-
-## Acknowledgments
-
-- Special thanks to the libGDX community for their extensive documentation and support, which made this project feasible.
-- Inspired by the original Angry Birds game and the principles of physics-based gameplay that make it enjoyable.
-- The `GifDecoder` class used in this project was sourced from [Stack Overflow](https://stackoverflow.com) and has been adapted to fit the needs of the game.
-
----
-
-Feel free to reach out with any questions, feedback, or suggestions for improvement. Happy gaming!
+```powershell
+cd "C:\Users\karti\OneDrive\Desktop\Documents\Angry-Bird-Game\angry birds\Angry_Birds"
 ```
 
-### Instructions to Save
+Run the desktop game:
 
-1. Copy the above Markdown content.
-2. Open your preferred text editor or IDE.
-3. Create a new file and name it `README.md`.
-4. Paste the copied content into the file.
-5. Save the file.
+```powershell
+.\gradlew.bat lwjgl3:run
+```
 
-Let me know if you need any further adjustments or additional sections!
+Compile only:
+
+```powershell
+.\gradlew.bat compileJava
+```
+
+Build the full project:
+
+```powershell
+.\gradlew.bat build
+```
+
+## Project Structure
+
+```text
+Angry-Bird-Game/
+  angry birds/
+    Angry_Birds/
+      assets/
+      core/
+        src/main/java/io/github/AngryBird_2023275/
+      lwjgl3/
+        src/main/java/io/github/AngryBird_2023275/lwjgl3/
+      build.gradle
+      settings.gradle
+      gradlew.bat
+```
+
+## Main Code Flow
+
+```text
+Lwjgl3Launcher.main()
+  -> creates desktop application
+  -> AngryBirds.create()
+  -> PlayScreen loading screen
+  -> mainMenuScreen
+  -> LevelSelection
+  -> Level1 / Level2 / Level3
+  -> gameplay loop
+  -> win, lose, pause, save, or resume screens
+```
+
+## Important Classes
+
+| Class | Responsibility |
+| --- | --- |
+| `Lwjgl3Launcher` | Starts the desktop application |
+| `AngryBirds` | Main libGDX game class and screen manager |
+| `PlayScreen` | Loading screen with progress bar and GIF |
+| `mainMenuScreen` | Main menu screen |
+| `LevelSelection` | Allows the player to select a level |
+| `Level1`, `Level2`, `Level3` | Playable game levels |
+| `BaseBird` | Common bird physics, state, rendering, and launch behavior |
+| `RedBird` | Standard bird |
+| `BombBird` | Bird with explosion ability |
+| `YellowBird` | Bird with speed boost ability |
+| `BasePig` | Common pig health, physics, and rendering behavior |
+| `MechanicPig`, `BigPig`, `AngryPig` | Different pig types |
+| `BaseBlock` | Common block physics, health, and destruction behavior |
+| `GlassBlock`, `WoodenBlock`, `IronBlock` | Different block types |
+| `MyContactListener` | Handles Box2D collisions and damage calculation |
+| `GameState` | Serializable state model |
+| `SaveLoadMenu` | Save slot screen |
+| `ResumeScreen` | Loads saved games |
+| `PauseMenuScreen` | Pause, resume, restart, and menu navigation |
+
+## Gameplay
+
+The player selects a bird, sets launch power and angle, and launches it toward pigs and blocks. The game uses Box2D physics to simulate gravity, movement, collisions, falling blocks, and impact damage.
+
+### Basic Gameplay Steps
+
+1. Start the game.
+2. Wait for the loading screen to finish.
+3. Open the main menu.
+4. Start a new game or resume a saved game.
+5. Select a level.
+6. Select a bird.
+7. Adjust power and angle sliders.
+8. Click launch.
+9. Destroy pigs using birds and falling blocks.
+10. Win by eliminating all pigs before all birds are used.
+
+## Bird Types
+
+### Red Bird
+
+The standard bird. It has normal collision damage and is useful for basic attacks.
+
+### Bomb Bird
+
+A special bird that can explode after being launched. The explosion increases its effect area for a short duration and helps damage structures and pigs.
+
+### Yellow Bird
+
+A special bird that can activate a speed boost after launch. This increases its velocity and impact potential.
+
+## Pig Types
+
+- `MechanicPig`: Basic pig type used in early levels
+- `BigPig`: Stronger pig with higher survivability
+- `AngryPig`: Tough pig type used for harder gameplay
+
+Each pig has health. When health reaches zero, the pig is removed from the level.
+
+## Block Types
+
+- `GlassBlock`: Easier to break
+- `WoodenBlock`: Medium durability
+- `WoodenBlock2`: Alternate wooden block asset
+- `IronBlock`: Stronger block material
+
+Blocks have health and can be destroyed by bird impacts or structural collisions.
+
+## Physics And Collision System
+
+The game creates a Box2D world with gravity:
+
+```java
+world = new World(new Vector2(0, -9.8f), true);
+```
+
+Every frame, the physics simulation is updated:
+
+```java
+world.step(1 / 60f, 8, 3);
+```
+
+Collisions are handled by `MyContactListener`. It checks the type of objects involved in a collision and applies damage accordingly.
+
+Examples of collision handling:
+
+- Bird hits pig: pig loses health based on bird speed and bird type
+- Bird hits block: block loses health based on impact force
+- Block hits pig: pig takes damage from falling or moving block
+- Block hits block: damage can transfer through structures
+
+## Launching System
+
+The player controls launch using power and angle sliders. The launch force is calculated using trigonometry:
+
+```java
+forceX = power * cos(angle);
+forceY = power * sin(angle);
+```
+
+The bird is launched using a Box2D linear impulse:
+
+```java
+birdBody.applyLinearImpulse(force, position, true);
+```
+
+## Save And Load System
+
+The game supports multiple save slots:
+
+```text
+save_slot_1.json
+save_slot_2.json
+save_slot_3.json
+save_slot_4.json
+```
+
+The save system stores logical game state such as:
+
+- Bird position
+- Bird type
+- Bird launch status
+- Pig position
+- Pig health
+- Block position
+- Block health
+- Block type
+
+When loading, the game recreates runtime objects such as Box2D bodies, textures, and actors from the saved data.
+
+## Win And Loss Conditions
+
+### Win
+
+The player wins when all pigs in the level are destroyed.
+
+### Loss
+
+The player loses when all birds are used and at least one pig is still alive.
+
+## Object-Oriented Concepts Used
+
+- Inheritance: `BaseBird`, `BasePig`, and `BaseBlock` are extended by specific game objects.
+- Polymorphism: Lists store base types like `BaseBird`, while runtime objects can be `RedBird`, `BombBird`, or `YellowBird`.
+- Encapsulation: Health, position, physics bodies, and textures are managed inside classes.
+- Abstraction: Common behavior is placed in abstract base classes.
+- Interfaces: The `Pig` interface defines hit behavior.
+
+## Assets
+
+The `assets` folder contains:
+
+- Background images
+- Bird and pig textures
+- Block textures
+- Catapult image
+- UI buttons
+- Loading animation
+- Font files
+- Skin files
+- Texture atlas files
+- Audio files
+
+## Testing
+
+The project includes JUnit and Mockito dependencies. Test classes are present for game objects and level behavior. The libGDX headless backend is included to support testing without launching the full desktop window.
+
+## Future Improvements
+
+- Refactor repeated level logic into a common base level class
+- Use libGDX `AssetManager` for better asset loading and disposal
+- Add more levels
+- Improve collision balancing and scoring
+- Add sound effects for collisions and launches
+- Add more bird abilities
+- Improve UI responsiveness
+- Add more unit tests
+- Add packaged desktop builds for distribution
+
+## Repository
+
+GitHub repository:
+
+```text
+https://github.com/Kartikharitwal/Angry-Bird-Game
+```
+
+## Author
+
+Roll No: 2023275
+
+## Acknowledgement
+
+This project is inspired by the Angry Birds gameplay concept and was developed for learning Java game development, libGDX rendering, Box2D physics, object-oriented design, and desktop game architecture.
